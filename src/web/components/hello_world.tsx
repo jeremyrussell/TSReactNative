@@ -5,7 +5,7 @@ import { HelloWorldProperties } from "../../common/state/types"
 export default class HelloWorld extends React.Component<HelloWorldProperties> {
 	componentDidMount() {
 		setTimeout(() => {
-			this.props.setDisplayStringAction("hello world!")
+			this.props.setDisplayStringAction && this.props.setDisplayStringAction("hello world!")
 		}, 1000)
 	}
 	render() {
