@@ -10,7 +10,7 @@ export function mapStateToProps({ displayString }: StoreState) {
 	}
 }
 
-export function mapDispatchToProps(dispatch: Dispatch<any>) {
+export function mapDispatchToProps(dispatch: Dispatch<actions.DisplayAction>) {
 	return {
 		setDisplayStringAction: (displayString: string) => dispatch(actions.setDisplayStringAction(displayString))
 	}

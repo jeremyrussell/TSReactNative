@@ -2,7 +2,7 @@ import * as React from "react"
 import { setDisplayStringAction } from "../../common/state/actions"
 import { HelloWorldProperties } from "../../common/state/types"
 
-export default class HelloWorld extends React.Component<HelloWorldProperties, any> {
+export default class HelloWorld extends React.Component<HelloWorldProperties> {
 	componentDidMount() {
 		setTimeout(() => {
 			this.props.setDisplayStringAction("hello world!")

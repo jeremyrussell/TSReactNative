@@ -1,10 +1,14 @@
-import { SET_DISPLAY_STRING } from "./types"
+import { SET_DISPLAY_STRING, OTHER } from "./types"
 
 export interface SetDisplayString {
 	type: SET_DISPLAY_STRING
 	displayString: string
 }
-// export type SetDisplayStringAction = SetDisplayString
+export interface Other {
+	type: OTHER
+}
+
+export type DisplayAction = SetDisplayString | Other
 
 export function setDisplayStringAction(displayString: string): SetDisplayString {
 	return {
