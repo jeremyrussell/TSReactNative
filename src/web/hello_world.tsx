@@ -1,18 +1,17 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import { text } from "../common/text"
+import { createStore } from "redux"
+import { Provider } from "react-redux"
 
-const seven: number = 7
+import { hello } from "../common/state/reducer"
+import { StoreState } from "../common/state/store"
+import HelloWorld from "./containers/hello_world"
 
-class App extends React.Component {
-	render() {
-		return (
-			<span>{text.label}</span>
-		)
-	}
-}
+const store = createStore<StoreState>(hello, {displayString: ""})
 
 ReactDOM.render(
-	<App />,
+	<Provider store={store}>
+		<HelloWorld />
+	</Provider>,
 	document.getElementById("root") as HTMLElement
 )
